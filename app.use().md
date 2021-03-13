@@ -52,7 +52,9 @@ app.get(current_dir +'/', (req, res) => {
 Make sure there is no duplicate '/' when visiting the page
 
 e.g.  '/COMP4537/personal_project' + '/' ***√***
-      '/COMP4537/personal_project/' + 'quizAdmin' ***√***      
+
+      '/COMP4537/personal_project/' + 'quizAdmin' ***√***     
+      
       '/COMP4537/personal_project/' + '/quizAdmin' ***X***
 
 
