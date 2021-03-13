@@ -19,9 +19,14 @@ Cannot GET /
 ### Related Code:
 
 ```js
-app.get(current_dir +'/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
     console.log(connection)
+})
+
+app.get( '/quizAdmin', (req, res) => {
+    res.send("<html>Hi<html>")
+    res.sendFile(__dirname + '/public/admin.html')
 })
 ```
 
@@ -32,7 +37,7 @@ app.get(current_dir +'/', (req, res) => {
 Prepended path to the APIs 
 
 ```js
-const current_dir = '/COMP4537/personal_project/'
+const current_dir = '/COMP4537/personal_project'
 ```
 
 ```js
@@ -41,4 +46,16 @@ app.get(current_dir +'/', (req, res) => {
     console.log(connection)
 })
 ```
+
+#### Notice
+
+Make sure there is no duplicate '/' when visiting the page
+
+e.g.  '/COMP4537/personal_project' + '/' ***√***
+      '/COMP4537/personal_project/' + 'quizAdmin' ***√***      
+      '/COMP4537/personal_project/' + '/quizAdmin' ***X***
+
+
+
+
 
